@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>math.random() returns random value between 0 and 1</p>
+    <h2>exe 07</h2>
+    <p>RANDOM NUMBER</p>
+    <p id="ex01"></p>
+    <p id="ex02"></p>
+    <script>
+        var num;
+        num = Math.random();
+        document.getElementById("ex01").innerHTML = "Random number is"+ num;
+        if(num > 0.5){
+            document.getElementById("ex02").innerHTML = "Big";
+        }
+        else{
+            document.getElementById("ex02").innerHTML = "Small";
+        }
+    </script>
+    <hr>
+    <p>DATE</p>
+    <button onclick="date()">Click Me</button>
+    <p id="hour"></p>
+    <p id="info"></p>
+    <script>
+        function date(){
+            var date = new Date().getHours();
+            document.getElementById("hour").innerHTML = date;
+            if(date <= 9){
+                document.getElementById("info").innerHTML ="Good Morning!";
+            }
+            else if(date <= 16){
+                document.getElementById("info").innerHTML = "Good Afternoon!";
+            }
+            else{
+                document.getElementById("info").innerHTML = "Good Night!";
+            }
+        }
+    </script>
+    <hr>
+    <p>DAY</p>
+    <button onclick="day()">Click Me</button>
+    <p id="dayinfo"></p>
+    <script>
+        function day(){
+            var day = new Date().getDay();
+            switch(day){
+                case 0:
+                    document.getElementById("dayinfo").innerHTML = "Sunday";
+                    break;
+                case 6:
+                    document.getElementById("dayinfo").innerHTML = "Saturday";
+                    break;
+                default:
+                    document.getElementById("dayinfo").innerHTML = "Working Day";
+                    break;
+            }
+        }
+    </script>
+    <hr>
+    <button onclick="input()">what day today</button>
+    <script>
+        function input(){
+            var input = window.prompt("plese enter 1~7 ");
+            switch(Number(input)){
+                case 1:
+                    window.alert("Monday");
+                    break;
+                case 2:
+                    window.alert("Tuesday");
+                    break;
+                case 3:
+                    window.alert("Wednesday");
+                    break;
+                case 4:
+                    window.alert("Thursday");
+                    break;
+                case 5:
+                    window.alert("Friday");
+                    break;
+                case 6:
+                    window.alert("Saturday");
+                    break;
+                case 7:
+                    window.alert("Sunday");
+                    break;
+                default:
+                    window.alert("No, no, no, you're wrong. Please follow the instructions.")
+            }
+        }
+    </script>
+</body>
+
