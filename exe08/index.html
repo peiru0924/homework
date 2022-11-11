@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>exe08</title>
+        <style>
+            p{
+                color: rgb(82, 136, 207);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: small;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Javascript for loop</p>
+        <p id="first"></p>
+
+        <script>
+            var strText = ""; 
+            var i;
+            var sum = 0;
+
+            for ( i = 1; i <= 5; i++ ){
+                sum+=i;
+                strText += "Loop =" + i + ", sum =" + sum + "<br>"
+            }
+            document.getElementById("first").innerHTML = strText;
+
+            // ( i++ ) means i + 1 //
+            // ( i=0 , y=i++ ) = ( i=0 , y=0+1 =1 ) //  
+            // ( sum+=i ) means sum = sum+i //
+        
+        </script>
+        <hr>
+
+        <p>Java script for loop using while</p>
+        <p id="second"></p>
+
+        <script>
+            var strText02 = "";
+            var x = 1;
+            var sum02 = 0;
+
+            while ( x <= 5 ){
+                sum02 += x;
+                strText02 += "Loop =" + x + ", sum =" + sum02 + "<br>";
+                x++;
+            }
+            document.getElementById("second").innerHTML = strText02;
+
+        </script>
+        <hr>
+
+        <p>Java script for loop using do...while...</p>
+        <p id="third"></p>
+
+        <script>
+            var strText03 ="";
+            var y = 2;
+            var sum03 = 6;
+
+            do{
+                sum03 += y;
+                strText03 += "Loop =" + y + ", sum =" + sum03 + "<br>";
+                y++
+            }while( y <= 5)
+            document.getElementById("third").innerHTML = strText03;
+
+        </script>
+        <hr>
+
+        <p>Date().getHours show time info</p>
+        <button onclick="timeFunc()">Click</button>
+        <p id="numHour"></p>
+        <p id="timeInfo"></p>
+
+        <script>
+            function timeFunc(){
+                var timeHour = new Date().getHours();
+                var hourInfo;
+                
+                hourInfo= (timeHour > 11) ? "PM":"AM";
+                document.getElementById("numHour").innerHTML = "Hours = " + timeHour ;
+                document.getElementById("timeInfo").innerHTML = "Now is " + hourInfo;
+            }
+        </script>
+        <hr>
+
+
+        <p>Array</p>
+        <p id="msg01"></p>
+        <p id="msg001"></p>
+        
+        <script>
+            var numList = [0, 4, 2, 8, 6];
+            var numSort = numList.sort();
+            var arrayLength = numList.length;
+            var numArray = "";
+            var i;
+            
+            for ( i=0; i < arrayLength; i++ ){
+                numArray += "numSort [" + i + "] = " + numSort[i] + "<br>";
+            }
+
+            document.getElementById("msg01").innerHTML = "Length of the Numlist = " + arrayLength;
+            document.getElementById("msg001").innerHTML = numArray;
+        </script>
+        <hr>
+
+
+        <p>Array02</p>
+        <p id="msg02"></p>
+        <p id="msg002"></p>
+        
+        <script>
+            var numList02 = [1, 5, 7, 8, 3, 4, 9, 6, 2, 0];
+            var numSort02 = numList02.sort();
+            var arrayLength02 = numList02.length;
+            var numArray02 = "";
+            var z;
+            
+            for ( z=0; z < arrayLength02; z++ ){
+                numArray02 += "numSort [" + z + "] = " + numSort02[z] + "<br>";
+            }
+
+            document.getElementById("msg02").innerHTML = "Length of the Numlist = " + arrayLength02;
+            document.getElementById("msg002").innerHTML = numArray02;
+        </script>
+        <hr>
+
+    </body>
+</html>
